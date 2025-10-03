@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "youth": "Youth",
+    "sundaySchool": "Sunday School",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "register": "Register Now",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "age": "Age",
+    "notes": "Notes"
+  },
+  "home": {
+    "title": "Abu Snan Orthodox Church",
+    "subtitle": "House of God and House of the Orthodox People",
+    "hero": {
+      "title": "Welcome to Abu Snan Orthodox Church",
+      "subtitle": "A place for Orthodox worship, spiritual fellowship, and community service"
+    },
+    "prayerTimes": {
+      "title": "Divine Liturgy & Prayer Times",
+      "sunday": "Sunday",
+      "weekday": "Weekdays",
+      "evening": "Evening",
+      "morning": "Morning",
+      "special": "Special Occasions"
+    },
+    "upcomingEvents": {
+      "title": "Upcoming Events",
+      "noEvents": "No upcoming events"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "youth": "Youth",
+      "sundaySchool": "Sunday School"
+    }
+  },
+  "youth": {
+    "title": "Youth",
+    "description": "The Youth Group at Abu Snan Orthodox Church is a community of enthusiastic young people dedicated to serving God and the community. We aim to build a generation strong in faith and service.",
+    "goals": {
+      "title": "Our Goals",
+      "spiritual": "Spiritual Growth",
+      "service": "Community Service",
+      "fellowship": "Brotherly Fellowship",
+      "leadership": "Leadership Development"
+    },
+    "activities": {
+      "title": "Recurring Activities",
+      "weekly": "Weekly Meetings",
+      "monthly": "Monthly Outings",
+      "seasonal": "Seasonal Activities",
+      "service": "Service Activities"
+    },
+    "gallery": {
+      "title": "Photo Gallery",
+      "viewAll": "View All"
+    },
+    "registration": {
+      "title": "Youth Registration",
+      "form": {
+        "name": "Full Name",
+        "age": "Age",
+        "phone": "Phone Number",
+        "email": "Email",
+        "notes": "Additional Notes",
+        "submit": "Register"
+      }
+    }
+  },
+  "sundaySchool": {
+    "title": "Sunday School",
+    "description": "Sunday School offers a comprehensive program for teaching children and youth the principles of Orthodox Christian faith.",
+    "program": {
+      "title": "Program Description",
+      "content": "We offer interactive lessons, workshops, and diverse activities for all age groups."
+    },
+    "ageGroups": {
+      "title": "Age Groups",
+      "preschool": "Preschool (3-5 years)",
+      "elementary": "Elementary (6-12 years)",
+      "teen": "Teens (13-17 years)",
+      "youngAdult": "Young Adults (18-25 years)"
+    },
+    "schedule": {
+      "title": "Weekly Schedule",
+      "sunday": "Sunday",
+      "time": "10:00 AM - 12:00 PM"
+    },
+    "registration": {
+      "title": "Registration Instructions",
+      "instructions": "Please download the form, fill it out, and submit it to the church",
+      "downloadForm": "Download Form"
+    }
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "filter": {
+      "all": "All",
+      "events": "Events",
+      "youth": "Youth",
+      "sundaySchool": "Sunday School",
+      "services": "Services"
+    },
+    "noImages": "No images available",
+    "loading": "Loading images..."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "title": "Send us a Message",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Office Hours"
+    },
+    "map": {
+      "title": "Church Location"
+    }
+  },
+  "footer": {
+    "address": "Abu Snan Orthodox Church, Abu Snan, Israel",
+    "phone": "+972-4-123-4567",
+    "email": "info@abusnanchurch.org",
+    "copyright": "All rights reserved © 2024"
+  }
+}
