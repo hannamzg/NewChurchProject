@@ -21,33 +21,40 @@ const Home = () => {
     <div className='min-h-screen'>
       
       {/* Hero Section */}
-      <section className='relative bg-gradient-to-br from-primary-500 via-secondary-500 to-primary-600 text-white overflow-hidden'>
+      <section className='relative bg-gradient-to-br from-primary-500 via-secondary-500 to-primary-600 text-white overflow-hidden min-h-screen flex items-center'>
         <div className='absolute inset-0 bg-black/20'></div>
         <div className='absolute inset-0 bg-gradient-to-r from-primary-500/20 to-transparent'></div>
-        <div className='relative container-app section-padding'>
+        
+        {/* Animated background elements */}
+        <div className='absolute inset-0 overflow-hidden'>
+          <div className='absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-bounce-gentle'></div>
+          <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-bounce-gentle' style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className='relative container-app section-padding w-full'>
           <div className='max-w-5xl mx-auto text-center'>
-            <div className='mb-8'>
-              <div className='w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl border-2 border-white/20'>
+            <div className='mb-8 animate-fade-in'>
+              <div className='w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl border-2 border-white/20 animate-bounce-gentle'>
                 <img
                   src='/images/orthodox-cross.png'
                   alt='Orthodox Cross'
-                  className='w-20 h-20 object-contain'
+                  className='w-20 h-20 object-contain drop-shadow-lg'
                 />
               </div>
             </div>
-            <h1 className='text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg text-display'>
+            <h1 className='text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg text-display animate-slide-up'>
               كنيسة القديس جاورجيوس للروم الأرثوذكس
             </h1>
-            <p className='text-xl md:text-3xl mb-12 text-white/90 font-medium'>
+            <p className='text-xl md:text-3xl mb-12 text-white/90 font-medium animate-slide-up' style={{animationDelay: '0.2s'}}>
               أبو سنان، الجليل - بيت يجمع المؤمنين للصلاة والعبادة
             </p>
-            <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-6 justify-center animate-scale-in' style={{animationDelay: '0.4s'}}>
               <Button
                 as={Link}
                 to='/contact'
                 variant='secondary'
                 size='lg'
-                className='text-lg px-10 py-5'
+                className='text-lg px-10 py-5 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30'
               >
                 {t('common.learnMore')}
               </Button>
@@ -56,7 +63,7 @@ const Home = () => {
                 to='/gallery'
                 variant='outline'
                 size='lg'
-                className='text-lg px-10 py-5 border-white text-white hover:bg-white hover:text-primary-600'
+                className='text-lg px-10 py-5 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300'
               >
                 {t('nav.gallery')}
               </Button>
@@ -280,20 +287,26 @@ const Home = () => {
       </section>
 
       {/* Saint George Section */}
-      <section className='section-padding bg-white dark:bg-neutral-900'>
+      <section className='section-padding bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-800'>
         <div className='container-app'>
-          <div className='text-center mb-12'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mb-6 shadow-lg'>
+              <span className="text-2xl">{saintGeorgeInfo.icon}</span>
+            </div>
             <h2 className='text-4xl md:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 text-display'>
               القديس جاورجيوس
             </h2>
             <div className='w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
+            <p className='text-lg text-neutral-600 dark:text-neutral-400 mt-4 max-w-2xl mx-auto'>
+              شفيع الكنيسة ورمز الشجاعة والإيمان
+            </p>
           </div>
 
           <div className='grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto'>
-            <Card className="bg-white dark:bg-neutral-800 shadow-xl">
+            <Card className="bg-white dark:bg-neutral-800 shadow-xl hover:shadow-2xl transition-all duration-300 border-0">
               <Card.Body className="p-8">
                 <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <span className="text-3xl">{saintGeorgeInfo.icon}</span>
                   </div>
                   <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
@@ -332,15 +345,15 @@ const Home = () => {
               </Card.Body>
             </Card>
 
-            <Card className="bg-white dark:bg-neutral-800 shadow-xl">
+            <Card className="bg-white dark:bg-neutral-800 shadow-xl hover:shadow-2xl transition-all duration-300 border-0">
               <Card.Body className="p-8">
                 <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6 text-center">
                   معجزات القديس جاورجيوس
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   {saintGeorgeInfo.miracles.map((miracle, index) => (
-                    <div key={index} className="text-center p-4 bg-neutral-50 dark:bg-neutral-700 rounded-lg">
-                      <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div key={index} className="text-center p-4 bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-neutral-700 dark:to-neutral-800 rounded-lg hover:shadow-md transition-all duration-300">
+                      <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                         <span className="text-lg">✨</span>
                       </div>
                       <h4 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
@@ -356,65 +369,69 @@ const Home = () => {
       </section>
 
       {/* Orthodox Feasts Section */}
-      <section className='section-padding bg-neutral-50 dark:bg-neutral-800'>
+      <section className='section-padding bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900'>
         <div className='container-app'>
-          <div className='text-center mb-12'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full mb-6 shadow-lg'>
+              <span className="text-2xl">🎊</span>
+            </div>
             <h2 className='text-4xl md:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 text-display'>
               الأعياد الأرثوذكسية
             </h2>
-            <div className='w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
+            <div className='w-24 h-1 bg-gradient-to-r from-accent-500 to-accent-600 mx-auto rounded-full'></div>
+            <p className='text-lg text-neutral-600 dark:text-neutral-400 mt-4 max-w-2xl mx-auto'>
+              احتفالات الكنيسة المقدسة وأوقات الفرح الروحي
+            </p>
           </div>
 
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto'>
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
             {orthodoxFeasts.majorFeasts.slice(0, 6).map((feast) => (
-              <Card key={feast.id} className="bg-white dark:bg-neutral-800 shadow-xl">
+              <Card key={feast.id} className="bg-white dark:bg-neutral-800 shadow-xl hover:shadow-2xl transition-all duration-300 border-0 group">
                 <Card.Body className="p-6">
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                       <span className="text-2xl">🎊</span>
                     </div>
                     <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-100 mb-2">
                       {feast.name}
                     </h3>
-                    <p className="text-sm text-primary-600 dark:text-primary-400 font-semibold">
+                    <p className="text-sm text-accent-600 dark:text-accent-400 font-semibold">
                       {feast.date}
                     </p>
                   </div>
                   
-                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 text-sm">
+                  <p className="text-neutral-700 dark:text-neutral-300 mb-4 text-sm leading-relaxed">
                     {feast.description}
                   </p>
                   
                   <div className="mb-4">
-                    <span className="inline-block bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs px-2 py-1 rounded-full">
+                    <span className="inline-block bg-accent-100 dark:bg-accent-900 text-accent-800 dark:text-accent-200 text-xs px-3 py-1 rounded-full font-medium">
                       {feast.importance}
                     </span>
                   </div>
                   
-                  <div>
+                  <div className="mb-6">
                     <h4 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
                       التقاليد:
                     </h4>
                     <ul className="text-sm text-neutral-600 dark:text-neutral-400 space-y-1">
                       {feast.traditions.slice(0, 2).map((tradition, index) => (
                         <li key={index} className="flex items-center">
-                          <span className="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2"></span>
+                          <span className="w-1.5 h-1.5 bg-accent-500 rounded-full mr-2 flex-shrink-0"></span>
                           {tradition}
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="mt-4">
-                    <Button
-                      as={Link}
-                      to="/orthodox-feasts"
-                      variant="outline"
-                      className="w-full text-xs"
-                    >
-                      جميع الأعياد الأرثوذكسية
-                    </Button>
-                  </div>
+                  <Button
+                    as={Link}
+                    to="/orthodox-feasts"
+                    variant="outline"
+                    className="w-full text-xs hover:bg-accent-600 hover:text-white hover:border-accent-600"
+                  >
+                    جميع الأعياد الأرثوذكسية
+                  </Button>
                 </Card.Body>
               </Card>
             ))}
@@ -423,20 +440,26 @@ const Home = () => {
       </section>
 
       {/* Jesus Christ Section */}
-      <section className='section-padding bg-white dark:bg-neutral-900'>
+      <section className='section-padding bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-800'>
         <div className='container-app'>
-          <div className='text-center mb-12'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full mb-6 shadow-lg'>
+              <span className="text-2xl">✝️</span>
+            </div>
             <h2 className='text-4xl md:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 text-display'>
               يسوع المسيح
             </h2>
-            <div className='w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
+            <div className='w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto rounded-full'></div>
+            <p className='text-lg text-neutral-600 dark:text-neutral-400 mt-4 max-w-2xl mx-auto'>
+              ابن الله والمخلص، مصدر الحياة والخلاص
+            </p>
           </div>
 
           <div className='grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto'>
-            <Card className="bg-white dark:bg-neutral-800 shadow-xl">
+            <Card className="bg-white dark:bg-neutral-800 shadow-xl hover:shadow-2xl transition-all duration-300 border-0">
               <Card.Body className="p-8">
                 <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <span className="text-3xl">✝️</span>
                   </div>
                   <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
@@ -448,7 +471,7 @@ const Home = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  <div>
+                  <div className="p-4 bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-lg">
                     <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
                       مكان الميلاد:
                     </h4>
@@ -456,7 +479,7 @@ const Home = () => {
                       {jesusChristInfo.basicInfo.birth}
                     </p>
                   </div>
-                  <div>
+                  <div className="p-4 bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-lg">
                     <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
                       بداية الخدمة:
                     </h4>
@@ -464,7 +487,7 @@ const Home = () => {
                       {jesusChristInfo.basicInfo.ministry}
                     </p>
                   </div>
-                  <div>
+                  <div className="p-4 bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-lg">
                     <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
                       القيامة:
                     </h4>
@@ -487,23 +510,23 @@ const Home = () => {
               </Card.Body>
             </Card>
 
-            <Card className="bg-white dark:bg-neutral-800 shadow-xl">
+            <Card className="bg-white dark:bg-neutral-800 shadow-xl hover:shadow-2xl transition-all duration-300 border-0">
               <Card.Body className="p-8">
                 <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6 text-center">
                   المعجزات
                 </h3>
                 <div className="grid grid-cols-1 gap-4">
                   {jesusChristInfo.miracles.slice(0, 4).map((miracle) => (
-                    <div key={miracle.id} className="p-4 bg-neutral-50 dark:bg-neutral-700 rounded-lg">
+                    <div key={miracle.id} className="p-4 bg-gradient-to-r from-neutral-50 to-neutral-100 dark:from-neutral-700 dark:to-neutral-800 rounded-lg hover:shadow-md transition-all duration-300">
                       <div className="flex items-center mb-2">
-                        <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mr-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center mr-3 shadow-md">
                           <span className="text-sm">✨</span>
                         </div>
                         <h4 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
                           {miracle.name}
                         </h4>
                       </div>
-                      <p className="text-xs text-neutral-600 dark:text-neutral-400">
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
                         {miracle.description}
                       </p>
                     </div>
@@ -516,32 +539,38 @@ const Home = () => {
       </section>
 
       {/* Virgin Mary Section */}
-      <section className='section-padding bg-neutral-50 dark:bg-neutral-800'>
+      <section className='section-padding bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900'>
         <div className='container-app'>
-          <div className='text-center mb-12'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-full mb-6 shadow-lg'>
+              <span className="text-2xl">👑</span>
+            </div>
             <h2 className='text-4xl md:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 text-display'>
               العذراء مريم
             </h2>
-            <div className='w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
+            <div className='w-24 h-1 bg-gradient-to-r from-secondary-500 to-secondary-600 mx-auto rounded-full'></div>
+            <p className='text-lg text-neutral-600 dark:text-neutral-400 mt-4 max-w-2xl mx-auto'>
+              والدة الإله، الملكة السماوية وشفيعتنا
+            </p>
           </div>
 
           <div className='grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto'>
-            <Card className="bg-white dark:bg-neutral-800 shadow-xl">
+            <Card className="bg-white dark:bg-neutral-800 shadow-xl hover:shadow-2xl transition-all duration-300 border-0">
               <Card.Body className="p-8">
                 <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <span className="text-3xl">👑</span>
                   </div>
                   <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
                     {virginMaryInfo.basicInfo.name}
                   </h3>
-                  <p className="text-lg text-primary-600 dark:text-primary-400 font-semibold">
+                  <p className="text-lg text-secondary-600 dark:text-secondary-400 font-semibold">
                     {virginMaryInfo.basicInfo.titles.slice(0, 3).join(' • ')}
                   </p>
                 </div>
                 
                 <div className="space-y-4">
-                  <div>
+                  <div className="p-4 bg-gradient-to-r from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 rounded-lg">
                     <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
                       الوالدان:
                     </h4>
@@ -549,7 +578,7 @@ const Home = () => {
                       {virginMaryInfo.basicInfo.parents}
                     </p>
                   </div>
-                  <div>
+                  <div className="p-4 bg-gradient-to-r from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 rounded-lg">
                     <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
                       الزوج:
                     </h4>
@@ -557,7 +586,7 @@ const Home = () => {
                       {virginMaryInfo.basicInfo.spouse}
                     </p>
                   </div>
-                  <div>
+                  <div className="p-4 bg-gradient-to-r from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 rounded-lg">
                     <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
                       الابن:
                     </h4>
@@ -570,7 +599,7 @@ const Home = () => {
                     <Button
                       as={Link}
                       to="/virgin-mary"
-                      variant="primary"
+                      variant="secondary"
                       className="w-full"
                     >
                       تعلم أكثر عن العذراء مريم
@@ -580,23 +609,23 @@ const Home = () => {
               </Card.Body>
             </Card>
 
-            <Card className="bg-white dark:bg-neutral-800 shadow-xl">
+            <Card className="bg-white dark:bg-neutral-800 shadow-xl hover:shadow-2xl transition-all duration-300 border-0">
               <Card.Body className="p-8">
                 <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6 text-center">
                   الأعياد الرئيسية
                 </h3>
                 <div className="space-y-4">
                   {virginMaryInfo.majorFeasts.slice(0, 4).map((feast) => (
-                    <div key={feast.id} className="p-4 bg-neutral-50 dark:bg-neutral-700 rounded-lg">
+                    <div key={feast.id} className="p-4 bg-gradient-to-r from-neutral-50 to-neutral-100 dark:from-neutral-700 dark:to-neutral-800 rounded-lg hover:shadow-md transition-all duration-300">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
                           {feast.name}
                         </h4>
-                        <span className="text-xs text-primary-600 dark:text-primary-400 font-semibold">
+                        <span className="text-xs text-secondary-600 dark:text-secondary-400 font-semibold">
                           {feast.date}
                         </span>
                       </div>
-                      <p className="text-xs text-neutral-600 dark:text-neutral-400">
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
                         {feast.description}
                       </p>
                     </div>
@@ -609,39 +638,45 @@ const Home = () => {
       </section>
 
       {/* Orthodox Prayers Section */}
-      <section className='section-padding bg-white dark:bg-neutral-900'>
+      <section className='section-padding bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-800'>
         <div className='container-app'>
-          <div className='text-center mb-12'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mb-6 shadow-lg'>
+              <span className="text-2xl">🙏</span>
+            </div>
             <h2 className='text-4xl md:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 text-display'>
               الصلوات الأرثوذكسية
             </h2>
             <div className='w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
+            <p className='text-lg text-neutral-600 dark:text-neutral-400 mt-4 max-w-2xl mx-auto'>
+              صلوات وترانيم للتقرب من الله والقديسين
+            </p>
           </div>
 
           <div className='grid md:grid-cols-2 gap-8 max-w-6xl mx-auto'>
             {orthodoxPrayers.dailyPrayers.map((prayer) => (
-              <Card key={prayer.id} className="bg-white dark:bg-neutral-800 shadow-xl">
+              <Card key={prayer.id} className="bg-white dark:bg-neutral-800 shadow-xl hover:shadow-2xl transition-all duration-300 border-0 group">
                 <Card.Body className="p-8">
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                       <span className="text-2xl">🙏</span>
                     </div>
                     <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
                       {prayer.name}
                     </h3>
                   </div>
-                  <div className="bg-neutral-50 dark:bg-neutral-700 p-6 rounded-lg">
-                    <p className="text-neutral-800 dark:text-neutral-200 text-sm leading-relaxed text-center">
+                  <div className="bg-gradient-to-r from-neutral-50 to-neutral-100 dark:from-neutral-700 dark:to-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-600">
+                    <p className="text-neutral-800 dark:text-neutral-200 text-sm leading-relaxed text-center font-medium">
                       {prayer.text}
                     </p>
                   </div>
                   
-                  <div className="mt-4">
+                  <div className="mt-6">
                     <Button
                       as={Link}
                       to="/orthodox-prayers"
                       variant="outline"
-                      className="w-full text-xs"
+                      className="w-full text-xs hover:bg-primary-600 hover:text-white hover:border-primary-600"
                     >
                       جميع الصلوات الأرثوذكسية
                     </Button>

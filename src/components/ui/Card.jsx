@@ -18,12 +18,12 @@ const Card = ({
   onClick,
   ...rest
 }) => {
-  const baseClasses = 'card-base';
+  const baseClasses = 'bg-white dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 transition-all duration-300 ease-in-out';
 
   const variantClasses = {
-    default: '',
-    elevated: 'card-elevated',
-    interactive: 'card-interactive',
+    default: 'shadow-sm hover:shadow-md',
+    elevated: 'shadow-lg hover:shadow-xl border-neutral-300 dark:border-neutral-600',
+    interactive: 'shadow-md hover:shadow-xl hover:scale-105 cursor-pointer border-primary-200 dark:border-primary-800 hover:border-primary-300 dark:hover:border-primary-700',
   };
 
   const Component = onClick ? 'button' : 'div';
@@ -45,7 +45,7 @@ const Card = ({
 const CardHeader = ({ children, className = '', ...rest }) => (
   <div
     className={cn(
-      'px-6 py-4 border-b border-neutral-200 dark:border-neutral-700',
+      'px-6 py-5 border-b border-neutral-200 dark:border-neutral-700 bg-gradient-to-r from-neutral-50 to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 rounded-t-xl',
       className
     )}
     {...rest}
@@ -58,7 +58,7 @@ const CardHeader = ({ children, className = '', ...rest }) => (
  * Card Body component
  */
 const CardBody = ({ children, className = '', ...rest }) => (
-  <div className={cn('px-6 py-4', className)} {...rest}>
+  <div className={cn('px-6 py-5', className)} {...rest}>
     {children}
   </div>
 );
@@ -69,7 +69,7 @@ const CardBody = ({ children, className = '', ...rest }) => (
 const CardFooter = ({ children, className = '', ...rest }) => (
   <div
     className={cn(
-      'px-6 py-4 border-t border-neutral-200 dark:border-neutral-700',
+      'px-6 py-4 border-t border-neutral-200 dark:border-neutral-700 bg-gradient-to-r from-neutral-50 to-neutral-100 dark:from-neutral-800 dark:to-neutral-900 rounded-b-xl',
       className
     )}
     {...rest}
@@ -84,7 +84,7 @@ const CardFooter = ({ children, className = '', ...rest }) => (
 const CardTitle = ({ children, className = '', ...rest }) => (
   <h3
     className={cn(
-      'text-lg font-semibold text-neutral-900 dark:text-neutral-100',
+      'text-xl font-bold text-neutral-900 dark:text-neutral-100 leading-tight',
       className
     )}
     {...rest}
@@ -98,7 +98,7 @@ const CardTitle = ({ children, className = '', ...rest }) => (
  */
 const CardDescription = ({ children, className = '', ...rest }) => (
   <p
-    className={cn('text-sm text-neutral-600 dark:text-neutral-400', className)}
+    className={cn('text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed', className)}
     {...rest}
   >
     {children}
