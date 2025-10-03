@@ -9,8 +9,23 @@ import { saintGeorgeInfo, orthodoxFeasts, jesusChristInfo, virginMaryInfo, ortho
 const Home = () => {
   const { t } = useLanguage();
 
-  // Prepare slider images
-  const sliderImages = galleryImages.slice(0, 5).map(img => ({
+  // Prepare slider images - mix of church, youth, and Sunday school photos
+  const sliderImages = [
+    // Main church photo
+    galleryImages.find(img => img.id === 1),
+    // Church interior
+    galleryImages.find(img => img.id === 2),
+    // Youth activities
+    galleryImages.find(img => img.id === 5),
+    galleryImages.find(img => img.id === 13), // New youth spiritual activity
+    galleryImages.find(img => img.id === 15), // New youth group activity
+    galleryImages.find(img => img.id === 19), // New youth social activity
+    // Sunday school
+    galleryImages.find(img => img.id === 8),
+    // More youth activities
+    galleryImages.find(img => img.id === 18), // New youth spiritual meeting
+    galleryImages.find(img => img.id === 22), // New youth gathering
+  ].filter(Boolean).map(img => ({
     src: img.src,
     alt: img.alt,
     title: img.caption,
@@ -58,45 +73,45 @@ const Home = () => {
                 <Button
                   as={Link}
                   to="/saint-george"
-                  variant="outline"
+                  variant="ghost"
                   size="md"
-                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="text-sm px-6 py-3 border border-white/50 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm shadow-lg hover:shadow-xl"
                 >
                   القديس جاورجيوس
                 </Button>
                 <Button
                   as={Link}
                   to="/orthodox-feasts"
-                  variant="outline"
+                  variant="ghost"
                   size="md"
-                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="text-sm px-6 py-3 border border-white/50 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm shadow-lg hover:shadow-xl"
                 >
                   الأعياد الأرثوذكسية
                 </Button>
                 <Button
                   as={Link}
                   to="/jesus-christ"
-                  variant="outline"
+                  variant="ghost"
                   size="md"
-                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="text-sm px-6 py-3 border border-white/50 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm shadow-lg hover:shadow-xl"
                 >
                   يسوع المسيح
                 </Button>
                 <Button
                   as={Link}
                   to="/virgin-mary"
-                  variant="outline"
+                  variant="ghost"
                   size="md"
-                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="text-sm px-6 py-3 border border-white/50 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm shadow-lg hover:shadow-xl"
                 >
                   العذراء مريم
                 </Button>
                 <Button
                   as={Link}
                   to="/orthodox-prayers"
-                  variant="outline"
+                  variant="ghost"
                   size="md"
-                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="text-sm px-6 py-3 border border-white/50 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm shadow-lg hover:shadow-xl"
                 >
                   الصلوات الأرثوذكسية
                 </Button>
@@ -284,8 +299,8 @@ const Home = () => {
                 <Button
                   as={Link}
                   to='/youth'
-                  variant='outline'
-                  className='border-white text-white hover:bg-white hover:text-primary-600'
+                  variant='ghost'
+                  className='border border-white/50 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm shadow-lg'
                 >
                   انضم الآن
                 </Button>
@@ -309,8 +324,8 @@ const Home = () => {
                 <Button
                   as={Link}
                   to='/sunday-school'
-                  variant='outline'
-                  className='border-white text-white hover:bg-white hover:text-primary-600'
+                  variant='ghost'
+                  className='border border-white/50 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm shadow-lg'
                 >
                   تعلم أكثر
                 </Button>

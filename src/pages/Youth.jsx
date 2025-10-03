@@ -49,9 +49,75 @@ const Youth = () => {
     },
     {
       src: '/images/youth/WhatsApp Image 2024-10-23 at 22.29.08_62d1d797.jpg',
-      alt: 'اجتماع الشبيبة',
-      title: 'اجتماع الشبيبة',
-      description: 'اجتماعات الشبيبة الأرثوذكسية'
+      alt: 'لقاء حديث',
+      title: 'اللقاءات الحديثة',
+      description: 'أحدث لقاءات الشبيبة الأرثوذكسية'
+    },
+    {
+      src: '/images/youth/488455454_17945822231969345_3810780484377850041_n.jpg',
+      alt: 'نشاط روحي للشبيبة',
+      title: 'النشاط الروحي',
+      description: 'أنشطة روحية وتربوية للشبيبة الأرثوذكسية'
+    },
+    {
+      src: '/images/youth/490284024_1734419097486380_6639777031819146_n.jpg',
+      alt: 'لقاء الشباب',
+      title: 'لقاءات الشباب',
+      description: 'لقاءات منتظمة للشباب الأرثوذكسي'
+    },
+    {
+      src: '/images/youth/491212489_17946788033969345_6496394736311657187_n.jpg',
+      alt: 'نشاط جماعي',
+      title: 'الأنشطة الجماعية',
+      description: 'أنشطة جماعية تعزز روح الجماعة'
+    },
+    {
+      src: '/images/youth/491417733_17947012280969345_1996375411207247890_n.jpg',
+      alt: 'برنامج الشبيبة',
+      title: 'برامج الشبيبة',
+      description: 'برامج متنوعة للشبيبة الأرثوذكسية'
+    },
+    {
+      src: '/images/youth/491438441_1176139530487274_2061728995521215625_n.jpg',
+      alt: 'نشاط تعليمي',
+      title: 'الأنشطة التعليمية',
+      description: 'أنشطة تعليمية وتربوية للشبيبة'
+    },
+    {
+      src: '/images/youth/548007847_17963392253969345_5049766517398923943_n.jpg',
+      alt: 'لقاء روحي',
+      title: 'اللقاءات الروحية',
+      description: 'لقاءات روحية عميقة للشبيبة'
+    },
+    {
+      src: '/images/youth/547820327_17963392262969345_3554283172201839140_n.jpg',
+      alt: 'نشاط اجتماعي',
+      title: 'الأنشطة الاجتماعية',
+      description: 'أنشطة اجتماعية تخدم المجتمع'
+    },
+    {
+      src: '/images/youth/546635924_17963392235969345_6709135976801637941_n.jpg',
+      alt: 'برنامج تربوي',
+      title: 'البرامج التربوية',
+      description: 'برامج تربوية للشبيبة الأرثوذكسية'
+    },
+    {
+      src: '/images/youth/500468101_17950838285969345_5797607017481219214_n.jpg',
+      alt: 'نشاط تطوعي',
+      title: 'الأنشطة التطوعية',
+      description: 'أنشطة تطوعية لخدمة المجتمع'
+    },
+    {
+      src: '/images/youth/548130907_17963392205969345_283199740952138513_n.jpg',
+      alt: 'لقاء شبابي',
+      title: 'اللقاءات الشبابية',
+      description: 'لقاءات شبابية منتظمة ومثمرة'
+    },
+    {
+      src: '/images/youth/545506290_17963392196969345_2242260101363969782_n.jpg',
+      alt: 'نشاط ثقافي',
+      title: 'الأنشطة الثقافية',
+      description: 'أنشطة ثقافية وتراثية للشبيبة'
     }
   ];
 
@@ -222,6 +288,66 @@ const Youth = () => {
         </div>
       </section>
 
+      {/* Instagram Section */}
+      <section className='section-padding bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-800'>
+        <div className='container-app'>
+          <div className='text-center mb-12'>
+            <h2 className='text-4xl md:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 text-display'>
+              تابعونا على إنستغرام
+            </h2>
+            <div className='w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
+            <p className='text-lg text-neutral-600 dark:text-neutral-400 mt-4 max-w-2xl mx-auto'>
+              تابعوا آخر أخبار وأنشطة الشبيبة الأرثوذكسية في أبو سنان
+            </p>
+          </div>
+
+          <div className='max-w-4xl mx-auto'>
+            <Card className="bg-white dark:bg-neutral-800 shadow-xl">
+              <Card.Body className="p-8">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <span className="text-2xl">📷</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
+                    @orthodox_youth_abusinan
+                  </h3>
+                  <p className="text-neutral-600 dark:text-neutral-400">
+                    صفحة الشبيبة الأرثوذكسية الرسمية على إنستغرام
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-pink-50 to-purple-50 dark:from-neutral-700 dark:to-neutral-800 rounded-xl p-6 border border-neutral-200 dark:border-neutral-600">
+                  <iframe
+                    src="https://www.instagram.com/orthodox_youth_abusinan/embed"
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    scrolling="no"
+                    allowTransparency="true"
+                    className="rounded-lg"
+                    title="Instagram Feed - Orthodox Youth Abu Snan"
+                  ></iframe>
+                </div>
+                
+                <div className="mt-6 text-center">
+                  <Button
+                    as="a"
+                    href="https://www.instagram.com/orthodox_youth_abusinan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="primary"
+                    size="lg"
+                    className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  >
+                    تابعونا على إنستغرام
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
+      </section>
+      
       {/* Registration Section */}
       <section className="section-padding bg-gradient-to-r from-primary-500 to-secondary-500 text-white">
         <div className="container-app">
@@ -312,10 +438,10 @@ const Youth = () => {
                     
                     <Button
                       type="submit"
-                      variant="outline"
+                      variant="ghost"
                       size="lg"
                       disabled={isSubmitting}
-                      className="w-full border-white text-white hover:bg-white hover:text-primary-600 text-lg py-4"
+                      className="w-full border border-white/50 text-white hover:bg-white/20 hover:text-white text-lg py-4 backdrop-blur-sm shadow-lg"
                     >
                       {isSubmitting ? 'جاري التسجيل...' : 'انضم الآن'}
                     </Button>

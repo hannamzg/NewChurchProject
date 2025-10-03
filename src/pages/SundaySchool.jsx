@@ -267,9 +267,9 @@ const SundaySchool = () => {
                     حمل استمارة التسجيل واملأها ثم قدمها في الكنيسة
                   </p>
                   <Button
-                    variant="outline"
+                    variant="ghost"
                     size="lg"
-                    className="border-white text-white hover:bg-white hover:text-primary-600 w-full"
+                    className="border border-white/50 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm shadow-lg w-full"
                     onClick={() => {
                       // Create a simple PDF download
                       const link = document.createElement('a');
