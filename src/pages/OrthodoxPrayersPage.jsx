@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageLayout, Card, Button } from '../components/ui';
 import { orthodoxPrayers, orthodoxSaints } from '../data/orthodoxData';
 
 const OrthodoxPrayersPage = () => {
   const [activeTab, setActiveTab] = useState('daily');
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, []);
 
   return (
     <PageLayout>
@@ -42,6 +51,20 @@ const OrthodoxPrayersPage = () => {
                 className='px-6 py-3'
               >
                 الترانيم
+              </Button>
+              <Button
+                variant={activeTab === 'liturgies' ? 'primary' : 'outline'}
+                onClick={() => setActiveTab('liturgies')}
+                className='px-6 py-3'
+              >
+                القداسات
+              </Button>
+              <Button
+                variant={activeTab === 'akathists' ? 'primary' : 'outline'}
+                onClick={() => setActiveTab('akathists')}
+                className='px-6 py-3'
+              >
+                الأكاثست
               </Button>
               <Button
                 variant={activeTab === 'saints' ? 'primary' : 'outline'}
@@ -95,6 +118,62 @@ const OrthodoxPrayersPage = () => {
                     <div className="bg-neutral-50 dark:bg-neutral-700 p-6 rounded-lg">
                       <p className="text-neutral-800 dark:text-neutral-200 text-sm leading-relaxed text-center">
                         {hymn.text}
+                      </p>
+                    </div>
+                  </Card.Body>
+                </Card>
+              ))}
+            </div>
+          )}
+
+          {/* Liturgies */}
+          {activeTab === 'liturgies' && (
+            <div className='grid md:grid-cols-2 gap-8 max-w-6xl mx-auto'>
+              {orthodoxPrayers.liturgies.map((liturgy) => (
+                <Card key={liturgy.id} className="bg-white dark:bg-neutral-800 shadow-xl">
+                  <Card.Body className="p-8">
+                    <div className="text-center mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-2xl">📖</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
+                        {liturgy.name}
+                      </h3>
+                      <p className="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-3">
+                        {liturgy.description}
+                      </p>
+                    </div>
+                    <div className="bg-gradient-to-r from-neutral-50 to-neutral-100 dark:from-neutral-700 dark:to-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-600">
+                      <p className="text-neutral-800 dark:text-neutral-200 text-sm leading-relaxed text-center font-medium">
+                        {liturgy.text}
+                      </p>
+                    </div>
+                  </Card.Body>
+                </Card>
+              ))}
+            </div>
+          )}
+
+          {/* Akathists */}
+          {activeTab === 'akathists' && (
+            <div className='grid md:grid-cols-2 gap-8 max-w-6xl mx-auto'>
+              {orthodoxPrayers.akathists.map((akathist) => (
+                <Card key={akathist.id} className="bg-white dark:bg-neutral-800 shadow-xl">
+                  <Card.Body className="p-8">
+                    <div className="text-center mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-2xl">📿</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
+                        {akathist.name}
+                      </h3>
+                      <p className="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-3">
+                        {akathist.description}
+                      </p>
+                    </div>
+                    <div className="bg-gradient-to-r from-neutral-50 to-neutral-100 dark:from-neutral-700 dark:to-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-600">
+                      <p className="text-neutral-800 dark:text-neutral-200 text-sm leading-relaxed text-center font-medium">
+                        {akathist.text}
                       </p>
                     </div>
                   </Card.Body>

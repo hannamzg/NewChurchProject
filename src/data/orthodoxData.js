@@ -522,39 +522,145 @@ export const orthodoxPrayers = {
       id: 1,
       name: 'صلاة الصباح',
       nameEn: 'Morning Prayer',
-      text: 'أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ',
-      textEn: 'Lord Jesus Christ, Son of God, have mercy on me, a sinner'
+      text: 'أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ. أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ. أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ.',
+      textEn: 'Lord Jesus Christ, Son of God, have mercy on me, a sinner. Lord Jesus Christ, Son of God, have mercy on me, a sinner. Lord Jesus Christ, Son of God, have mercy on me, a sinner.',
+      description: 'صلاة يسوع المسيح الأساسية للصبح',
+      category: 'صلاة يسوع'
     },
     {
       id: 2,
       name: 'صلاة المساء',
       nameEn: 'Evening Prayer',
-      text: 'أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ',
-      textEn: 'Lord Jesus Christ, Son of God, have mercy on me, a sinner'
+      text: 'أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ. أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ. أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ.',
+      textEn: 'Lord Jesus Christ, Son of God, have mercy on me, a sinner. Lord Jesus Christ, Son of God, have mercy on me, a sinner. Lord Jesus Christ, Son of God, have mercy on me, a sinner.',
+      description: 'صلاة يسوع المسيح الأساسية للمساء',
+      category: 'صلاة يسوع'
     },
     {
       id: 3,
       name: 'صلاة الأبانا',
       nameEn: 'Our Father',
-      text: 'أبانا الذي في السماوات، ليتقدس اسمك، ليأت ملكوتك، لتكن مشيئتك كما في السماء كذلك على الأرض',
-      textEn: 'Our Father who art in heaven, hallowed be thy name, thy kingdom come, thy will be done on earth as it is in heaven'
+      text: 'أبانا الذي في السماوات، ليتقدس اسمك، ليأت ملكوتك، لتكن مشيئتك كما في السماء كذلك على الأرض. خبزنا كفافنا أعطنا اليوم، واغفر لنا ذنوبنا كما نغفر نحن أيضاً للمذنبين إلينا، ولا تدخلنا في تجربة لكن نجنا من الشرير.',
+      textEn: 'Our Father who art in heaven, hallowed be thy name, thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses as we forgive those who trespass against us, and lead us not into temptation but deliver us from evil.',
+      description: 'الصلاة الربانية التي علمها المسيح لتلاميذه',
+      category: 'صلاة أساسية'
+    },
+    {
+      id: 4,
+      name: 'صلاة السلام',
+      nameEn: 'Peace Prayer',
+      text: 'أيها الرب، اجعلني أُحِبُّ السلام، وأُحِبُّ الحقيقة، وأُحِبُّ العدالة، وأُحِبُّ الخير، وأُحِبُّ الصبر، وأُحِبُّ التواضع، وأُحِبُّ العفة، وأُحِبُّ الطهارة، وأُحِبُّ الصدقة، وأُحِبُّ الرحمة.',
+      textEn: 'Lord, make me love peace, love truth, love justice, love goodness, love patience, love humility, love chastity, love purity, love charity, love mercy.',
+      description: 'صلاة من أجل الفضائل المسيحية',
+      category: 'صلاة الفضائل'
+    },
+    {
+      id: 5,
+      name: 'صلاة الشكر',
+      nameEn: 'Thanksgiving Prayer',
+      text: 'أشكرك أيها الرب على كل النعم التي منحتني إياها. أشكرك على الحياة، وعلى الصحة، وعلى العائلة، وعلى الأصدقاء، وعلى كل الخير الذي أتاني منك. باركني أيها الرب وبارك كل من أحبهم.',
+      textEn: 'I thank you, Lord, for all the blessings you have given me. I thank you for life, for health, for family, for friends, for all the good that has come to me from you. Bless me, Lord, and bless all those I love.',
+      description: 'صلاة شكر لله على النعم',
+      category: 'صلاة الشكر'
+    },
+    {
+      id: 6,
+      name: 'صلاة التوبة',
+      nameEn: 'Repentance Prayer',
+      text: 'أيها الرب، أنا خاطئ وقد أخطأت أمامك. اغفر لي ذنوبي وطهرني من كل إثم. أعطني القوة لأتوب عن خطاياي وأعيش حياة مقدسة. ارحمني أيها الرب وخلصني.',
+      textEn: 'Lord, I am a sinner and have sinned before you. Forgive my sins and cleanse me from all iniquity. Give me the strength to repent of my sins and live a holy life. Have mercy on me, Lord, and save me.',
+      description: 'صلاة توبة وطلب المغفرة',
+      category: 'صلاة التوبة'
     }
   ],
 
   hymns: [
     {
       id: 1,
-      name: 'ترنيمة المجد لله',
-      nameEn: 'Glory to God',
-      text: 'المجد لله في الأعالي، وعلى الأرض السلام، وبالناس المسرة',
-      textEn: 'Glory to God in the highest, and on earth peace, goodwill toward men'
+      name: 'أغنيه العذراء الطاهرة',
+      nameEn: 'Hymn to the Pure Virgin',
+      text: 'أيتها العذراء الطاهرة، أم الله، صلّي لأجلنا نحن الخطاة. أيتها العذراء الطاهرة، أم الله، صلّي لأجلنا نحن الخطاة. أيتها العذراء الطاهرة، أم الله، صلّي لأجلنا نحن الخطاة.',
+      textEn: 'O Pure Virgin, Mother of God, pray for us sinners. O Pure Virgin, Mother of God, pray for us sinners. O Pure Virgin, Mother of God, pray for us sinners.',
+      description: 'ترنيمة للعذراء مريم',
+      category: 'ترانيم العذراء'
     },
     {
       id: 2,
+      name: 'ترنيمة المجد',
+      nameEn: 'Glory Hymn',
+      text: 'المجد للآب والابن والروح القدس، الآن وكل أوان وإلى دهر الدهور، آمين. المجد للآب والابن والروح القدس، الآن وكل أوان وإلى دهر الدهور، آمين.',
+      textEn: 'Glory to the Father and the Son and the Holy Spirit, now and forever and unto ages of ages, Amen. Glory to the Father and the Son and the Holy Spirit, now and forever and unto ages of ages, Amen.',
+      description: 'ترنيمة الثالوث الأقدس',
+      category: 'ترانيم الثالوث'
+    },
+    {
+      id: 3,
       name: 'ترنيمة القيامة',
       nameEn: 'Resurrection Hymn',
-      text: 'المسيح قام من بين الأموات، ووطئ الموت بالموت، ووهب الحياة للذين في القبور',
-      textEn: 'Christ is risen from the dead, trampling down death by death, and upon those in the tombs bestowing life'
+      text: 'المسيح قام من بين الأموات، ووطئ الموت بالموت، ووهب الحياة للذين في القبور. المسيح قام من بين الأموات، ووطئ الموت بالموت، ووهب الحياة للذين في القبور.',
+      textEn: 'Christ is risen from the dead, trampling down death by death, and upon those in the tombs bestowing life. Christ is risen from the dead, trampling down death by death, and upon those in the tombs bestowing life.',
+      description: 'ترنيمة عيد القيامة المجيد',
+      category: 'ترانيم القيامة'
+    },
+    {
+      id: 4,
+      name: 'ترنيمة الميلاد',
+      nameEn: 'Nativity Hymn',
+      text: 'المجد لله في الأعالي، وعلى الأرض السلام، وبالناس المسرة. المجد لله في الأعالي، وعلى الأرض السلام، وبالناس المسرة.',
+      textEn: 'Glory to God in the highest, and on earth peace, goodwill toward men. Glory to God in the highest, and on earth peace, goodwill toward men.',
+      description: 'ترنيمة ميلاد المسيح',
+      category: 'ترانيم الميلاد'
+    },
+    {
+      id: 5,
+      name: 'ترنيمة الصليب',
+      nameEn: 'Cross Hymn',
+      text: 'أيها الصليب المقدس، احفظنا من كل شر. أيها الصليب المقدس، احفظنا من كل شر. أيها الصليب المقدس، احفظنا من كل شر.',
+      textEn: 'O Holy Cross, protect us from all evil. O Holy Cross, protect us from all evil. O Holy Cross, protect us from all evil.',
+      description: 'ترنيمة للصليب المقدس',
+      category: 'ترانيم الصليب'
+    }
+  ],
+
+  liturgies: [
+    {
+      id: 1,
+      name: 'قداس القديس يوحنا الذهبي الفم',
+      nameEn: 'Liturgy of St. John Chrysostom',
+      text: 'في البدء كان الكلمة، والكلمة كان عند الله، وكان الكلمة الله. هذا كان في البدء عند الله. كل شيء به كان، وبغيره لم يكن شيء مما كان.',
+      textEn: 'In the beginning was the Word, and the Word was with God, and the Word was God. He was in the beginning with God. All things were made through him, and without him was not any thing made that was made.',
+      description: 'القداس الأرثوذكسي الأساسي',
+      category: 'قداسات'
+    },
+    {
+      id: 2,
+      name: 'قداس القديس باسيليوس الكبير',
+      nameEn: 'Liturgy of St. Basil the Great',
+      text: 'أيها الرب، أيها الإله القدوس، أيها القدير، أيها الأزلي، الذي في السماء، أيها الآب، أيها الابن، أيها الروح القدس، الثالوث الأقدس، ارحمنا.',
+      textEn: 'O Lord, O Holy God, O Almighty, O Eternal One, who art in heaven, O Father, O Son, O Holy Spirit, O Holy Trinity, have mercy on us.',
+      description: 'القداس الطويل للقديس باسيليوس',
+      category: 'قداسات'
+    }
+  ],
+
+  akathists: [
+    {
+      id: 1,
+      name: 'أكاثست العذراء مريم',
+      nameEn: 'Akathist to the Virgin Mary',
+      text: 'أيتها العذراء الطاهرة، أم الله، صلّي لأجلنا نحن الخطاة. أيتها العذراء الطاهرة، أم الله، صلّي لأجلنا نحن الخطاة.',
+      textEn: 'O Pure Virgin, Mother of God, pray for us sinners. O Pure Virgin, Mother of God, pray for us sinners.',
+      description: 'أكاثست العذراء مريم',
+      category: 'أكاثست'
+    },
+    {
+      id: 2,
+      name: 'أكاثست يسوع المسيح',
+      nameEn: 'Akathist to Jesus Christ',
+      text: 'أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ. أيها الرب يسوع المسيح، ابن الله، ارحمني أنا الخاطئ.',
+      textEn: 'Lord Jesus Christ, Son of God, have mercy on me, a sinner. Lord Jesus Christ, Son of God, have mercy on me, a sinner.',
+      description: 'أكاثست يسوع المسيح',
+      category: 'أكاثست'
     }
   ]
 };

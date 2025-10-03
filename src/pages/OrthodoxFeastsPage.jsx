@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageLayout, Card, Button } from '../components/ui';
 import { orthodoxFeasts } from '../data/orthodoxData';
 
 const OrthodoxFeastsPage = () => {
   const [activeTab, setActiveTab] = useState('major');
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, []);
 
   return (
     <PageLayout>

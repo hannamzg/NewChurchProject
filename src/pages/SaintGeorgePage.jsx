@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { PageLayout, Card } from '../components/ui';
 import { saintGeorgeInfo } from '../data/orthodoxData';
 
 const SaintGeorgePage = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
   return (
     <PageLayout>
       {/* Hero Section */}
