@@ -48,25 +48,59 @@ const Home = () => {
             <p className='text-xl md:text-3xl mb-12 text-white/90 font-medium animate-slide-up' style={{animationDelay: '0.2s'}}>
               أبو سنان، الجليل - بيت يجمع المؤمنين للصلاة والعبادة
             </p>
-            <div className='flex flex-col sm:flex-row gap-6 justify-center animate-scale-in' style={{animationDelay: '0.4s'}}>
-              <Button
-                as={Link}
-                to='/contact'
-                variant='secondary'
-                size='lg'
-                className='text-lg px-10 py-5 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30'
-              >
-                {t('common.learnMore')}
-              </Button>
-              <Button
-                as={Link}
-                to='/gallery'
-                variant='outline'
-                size='lg'
-                className='text-lg px-10 py-5 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300'
-              >
-                {t('nav.gallery')}
-              </Button>
+
+            {/* Orthodox Data Links */}
+            <div className='mt-12'>
+              <h3 className='text-2xl md:text-3xl font-bold text-white mb-6 text-center'>
+                المعلومات الروحية
+              </h3>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center animate-scale-in' style={{animationDelay: '0.6s'}}>
+                <Button
+                  as={Link}
+                  to="/saint-george"
+                  variant="outline"
+                  size="md"
+                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  القديس جاورجيوس
+                </Button>
+                <Button
+                  as={Link}
+                  to="/orthodox-feasts"
+                  variant="outline"
+                  size="md"
+                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  الأعياد الأرثوذكسية
+                </Button>
+                <Button
+                  as={Link}
+                  to="/jesus-christ"
+                  variant="outline"
+                  size="md"
+                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  يسوع المسيح
+                </Button>
+                <Button
+                  as={Link}
+                  to="/virgin-mary"
+                  variant="outline"
+                  size="md"
+                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  العذراء مريم
+                </Button>
+                <Button
+                  as={Link}
+                  to="/orthodox-prayers"
+                  variant="outline"
+                  size="md"
+                  className="text-sm px-6 py-3 border-white/50 text-white hover:bg-white hover:text-primary-600 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  الصلوات الأرثوذكسية
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -337,7 +371,8 @@ const Home = () => {
                     as={Link}
                     to="/saint-george"
                     variant="primary"
-                    className="w-full"
+                    size="lg"
+                    className="w-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                   >
                     تعلم أكثر عن القديس جاورجيوس
                   </Button>
@@ -427,8 +462,9 @@ const Home = () => {
                   <Button
                     as={Link}
                     to="/orthodox-feasts"
-                    variant="outline"
-                    className="w-full text-xs hover:bg-accent-600 hover:text-white hover:border-accent-600"
+                    variant="accent"
+                    size="lg"
+                    className="w-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                   >
                     جميع الأعياد الأرثوذكسية
                   </Button>
@@ -501,7 +537,8 @@ const Home = () => {
                       as={Link}
                       to="/jesus-christ"
                       variant="primary"
-                      className="w-full"
+                      size="lg"
+                      className="w-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                     >
                       تعلم أكثر عن يسوع المسيح
                     </Button>
@@ -600,7 +637,8 @@ const Home = () => {
                       as={Link}
                       to="/virgin-mary"
                       variant="secondary"
-                      className="w-full"
+                      size="lg"
+                      className="w-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                     >
                       تعلم أكثر عن العذراء مريم
                     </Button>
@@ -675,8 +713,9 @@ const Home = () => {
                     <Button
                       as={Link}
                       to="/orthodox-prayers"
-                      variant="outline"
-                      className="w-full text-xs hover:bg-primary-600 hover:text-white hover:border-primary-600"
+                      variant="primary"
+                      size="lg"
+                      className="w-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                     >
                       جميع الصلوات الأرثوذكسية
                     </Button>
