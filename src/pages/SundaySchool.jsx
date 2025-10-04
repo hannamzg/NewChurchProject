@@ -9,12 +9,6 @@ const SundaySchool = () => {
   // Prepare Sunday School images for slider
   const sundaySchoolImages = [
     {
-      src: '/images/sundaySchool/20240901_100057.jpg',
-      alt: 'درس مدرسة الأحد',
-      title: 'درس العقيدة الأرثوذكسية',
-      description: 'تعلم العقيدة الأرثوذكسية بطريقة مبسطة وممتعة'
-    },
-    {
       src: '/images/sundaySchool/20240915_114210.jpg',
       alt: 'أطفال في مدرسة الأحد',
       title: 'أطفال مدرسة الأحد',

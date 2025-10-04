@@ -44,16 +44,6 @@ export const upcomingEvents = [
 
 export const galleryImages = [
   {
-    id: 1,
-    src: '/images/mainchruchPhoto.jpg',
-    alt: 'كنيسة القديس جاورجيوس للروم الأرثوذكس',
-    altEn: 'Saint George Orthodox Church',
-    category: 'church',
-    year: 2024,
-    caption: 'كنيسة القديس جاورجيوس للروم الأرثوذكس في أبو سنان',
-    captionEn: 'Saint George Orthodox Church in Abu Snan',
-  },
-  {
     id: 2,
     src: '/images/church/427699919_366851302941752_5261103121099818892_n.jpg',
     alt: 'الداخلية المقدسة',
@@ -82,16 +72,6 @@ export const galleryImages = [
     year: 2024,
     caption: 'المذبح المقدس في الكنيسة',
     captionEn: 'Sacred Altar in the Church',
-  },
-  {
-    id: 5,
-    src: '/images/youth/430910086_423254923398985_8992598950818086049_n.jpg',
-    alt: 'لقاء الشبيبة',
-    altEn: 'Youth Meeting',
-    category: 'youth',
-    year: 2024,
-    caption: 'لقاء أسبوعي للشبيبة الأرثوذكسية',
-    captionEn: 'Weekly Orthodox Youth Meeting',
   },
   {
     id: 6,
@@ -132,16 +112,6 @@ export const galleryImages = [
     year: 2024,
     caption: 'لقاءات الشباب الأرثوذكسي',
     captionEn: 'Orthodox Youth Meetings',
-  },
-  {
-    id: 15,
-    src: '/images/youth/491212489_17946788033969345_6496394736311657187_n.jpg',
-    alt: 'نشاط جماعي',
-    altEn: 'Group Activity',
-    category: 'youth',
-    year: 2024,
-    caption: 'الأنشطة الجماعية للشبيبة',
-    captionEn: 'Group Activities for Youth',
   },
   {
     id: 16,
@@ -223,16 +193,7 @@ export const galleryImages = [
     caption: 'الأنشطة الثقافية للشبيبة',
     captionEn: 'Cultural Activities for Youth',
   },
-  {
-    id: 8,
-    src: '/images/sundaySchool/20240901_100057.jpg',
-    alt: 'درس مدرسة الأحد',
-    altEn: 'Sunday School Lesson',
-    category: 'sundaySchool',
-    year: 2024,
-    caption: 'درس في العقيدة الأرثوذكسية',
-    captionEn: 'Orthodox Doctrine Lesson',
-  },
+
   {
     id: 9,
     src: '/images/sundaySchool/20240915_114210.jpg',
