@@ -36,18 +36,6 @@ const Youth = () => {
   // Prepare youth images for slider
   const youthImages = [
     {
-      src: '/images/youth/WhatsApp Image 2024-10-23 at 22.29.08_62d1d797.jpg',
-      alt: 'لقاء حديث',
-      title: 'اللقاءات الحديثة',
-      description: 'أحدث لقاءات الشبيبة الأرثوذكسية'
-    },
-    {
-      src: '/images/youth/490284024_1734419097486380_6639777031819146_n.jpg',
-      alt: 'لقاء الشباب',
-      title: 'لقاءات الشباب',
-      description: 'لقاءات منتظمة للشباب الأرثوذكسي'
-    },
-    {
       src: '/images/youth/548007847_17963392253969345_5049766517398923943_n.jpg',
       alt: 'لقاء روحي',
       title: 'اللقاءات الروحية',
