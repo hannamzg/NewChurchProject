@@ -121,63 +121,71 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Image Slider Section */}
+      {/* Image Slider & About Church Section - 50/50 Layout */}
       <section className='section-padding bg-white dark:bg-neutral-900'>
         <div className='container-app'>
           <div className='text-center mb-12'>
             <h2 className='text-4xl md:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 text-display'>
-              معرض الكنيسة
+              معرض الكنيسة وعن الكنيسة
             </h2>
             <div className='w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
           </div>
 
-          <div className='max-w-6xl mx-auto'>
-            <SwiperSlider
-              images={sliderImages}
-              autoplay={true}
-              interval={4000}
-              effect="fade"
-            />
-          </div>
-        </div>
-      </section>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>
+            {/* Image Slider - Left Side */}
+            <div className='space-y-6'>
+              <div className='text-center mb-8'>
+                <h3 className='text-2xl md:text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-4'>
+                  معرض الكنيسة
+                </h3>
+                <div className='w-16 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
+              </div>
+              
+              <div className='h-96'>
+                <SwiperSlider
+                  images={sliderImages}
+                  autoplay={true}
+                  interval={4000}
+                  effect="fade"
+                />
+              </div>
+            </div>
 
-      {/* About Church Section */}
-      <section className='section-padding bg-neutral-50 dark:bg-neutral-800'>
-        <div className='container-app'>
-          <div className='text-center mb-12'>
-            <h2 className='text-4xl md:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 text-display'>
-              عن الكنيسة
-            </h2>
-            <div className='w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
-          </div>
+            {/* About Church - Right Side */}
+            <div className='space-y-6'>
+              <div className='text-center mb-8'>
+                <h3 className='text-2xl md:text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-4'>
+                  عن الكنيسة
+                </h3>
+                <div className='w-16 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full'></div>
+              </div>
 
-          <div className='max-w-4xl mx-auto'>
-            <Card className="bg-white dark:bg-neutral-800 shadow-xl">
-              <Card.Body className="p-8">
-                <div className="text-center mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">⛪</span>
+              <Card className="bg-white dark:bg-neutral-800 shadow-xl h-full">
+                <Card.Body className="p-8 h-full flex flex-col">
+                  <div className="text-center mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">⛪</span>
+                    </div>
+                    <h4 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
+                      كنيسة القديس جاورجيوس للروم الأرثوذكس
+                    </h4>
+                    <p className="text-lg text-primary-600 dark:text-primary-400 font-semibold">
+                      قرية أبو سنان، الجليل
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">
-                    كنيسة القديس جاورجيوس للروم الأرثوذكس
-                  </h3>
-                  <p className="text-lg text-primary-600 dark:text-primary-400 font-semibold">
-                    قرية أبو سنان، الجليل
-                  </p>
-                </div>
-                
-                <div className="prose prose-lg max-w-none text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                  <p className="mb-6">
-                    تُعد من أبرز المعالم الروحية في الجليل، وهي بيت يجمع المؤمنين للصلاة، العبادة، والاحتفال بأهم المناسبات الدينية. الكنيسة تتبع بطريركية الروم الأرثوذكس في القدس، وتخدم أبناء الرعية عبر إقامة القداديس الأسبوعية، الأسرار المقدسة مثل المعمودية والزواج، إضافة إلى النشاطات التعليمية والروحية للأطفال من خلال مدرسة الأحد، وبرامج خاصة للشبيبة التي تعزز روح المشاركة والمحبة.
-                  </p>
                   
-                  <p className="mb-6">
-                    الكنيسة ليست مجرد مكان للعبادة، بل هي أيضًا مركز اجتماعي وثقافي يحتضن العائلات ويقوي أواصر المحبة والوحدة بين أبناء القرية. بعمارتها التقليدية المزينة بالأيقونات واللوحات الجدارية، تحمل الكنيسة إرثًا تاريخيًا وروحيًا عريقًا يربط الماضي بالحاضر، وتبقى شاهدًا حيًا على الإيمان الأرثوذكسي العميق المتجذر في هذه الأرض المقدسة.
-                  </p>
-                </div>
-              </Card.Body>
-            </Card>
+                  <div className="prose prose-lg max-w-none text-neutral-700 dark:text-neutral-300 leading-relaxed flex-grow">
+                    <p className="mb-6">
+                      تُعد من أبرز المعالم الروحية في الجليل، وهي بيت يجمع المؤمنين للصلاة، العبادة، والاحتفال بأهم المناسبات الدينية. الكنيسة تتبع بطريركية الروم الأرثوذكس في القدس، وتخدم أبناء الرعية عبر إقامة القداديس الأسبوعية، الأسرار المقدسة مثل المعمودية والزواج، إضافة إلى النشاطات التعليمية والروحية للأطفال من خلال مدرسة الأحد، وبرامج خاصة للشبيبة التي تعزز روح المشاركة والمحبة.
+                    </p>
+                    
+                    <p className="mb-6">
+                      الكنيسة ليست مجرد مكان للعبادة، بل هي أيضًا مركز اجتماعي وثقافي يحتضن العائلات ويقوي أواصر المحبة والوحدة بين أبناء القرية. بعمارتها التقليدية المزينة بالأيقونات واللوحات الجدارية، تحمل الكنيسة إرثًا تاريخيًا وروحيًا عريقًا يربط الماضي بالحاضر، وتبقى شاهدًا حيًا على الإيمان الأرثوذكسي العميق المتجذر في هذه الأرض المقدسة.
+                    </p>
+                  </div>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
